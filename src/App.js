@@ -64,7 +64,7 @@ const App = () => {
 	return (
 		<div className='container movie-app'>
 			<div className='row d-flex align-items-center mt-4 mb-4'>
-				<img src={logo} width="100"/>
+				<img src={logo} alt="logo" width="100"/>
 				<h1 className ='col'>Movies</h1>
 				<SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
 				</div>
@@ -72,7 +72,7 @@ const App = () => {
 				<MovieListHeading heading='Search Results' />
 			</div>
 			<div className='row ml-3'>
-				{searchValue.length != 0 ? <MovieList
+				{searchValue.length !== 0 ? <MovieList
 					movies={movies}
 					handleFavouritesClick={addFavouriteMovie}
 					favouriteComponent={AddFavourites}
